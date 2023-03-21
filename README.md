@@ -1,5 +1,7 @@
-week-02
-2023.03.20 - 2023.03.26
+# week-02
+
+- 2023.03.20 - 2023.03.26
+
 
 ## 🧑🏻‍💻👩🏻‍💻 과제 시작 전에
 문제를 풀고 제출하는 방법을 알려드립니다.
@@ -51,7 +53,9 @@ git clone https://github.com/Elice-sw4-study/week-01 //레포지토리 주소
 ---
 
 이번 주 문제는 다음과 같습니다.
-🤓 mandatory part
+
+## 🤓 mandatory part
+
 1. 엘리스 알고리즘 5문제
 https://swtrack.elice.io/courses/64483/lectures/548289
 
@@ -61,10 +65,12 @@ https://obsidian-scene-3ac.notion.site/JS-100-94d97d294dd14c9b911a02c840fa9f2d
 3. 프로그래머스 0단계 70문제
 https://school.programmers.co.kr/learn/challenges/beginner?order=acceptance_desc&page=1&languages=javascript
 
-🧐 bonus part
-추가과제 선정
-주차스터디 기록
+## 🧐 bonus part
+
+- [추가과제 선정](https://www.notion.so/elice/44b57fe0f3714ce0b1e58818cfe08f1e)
+- [주차스터디 기록](https://www.notion.so/elice/4263a701c6864977ab31963d292a6a4d)
 
 🔥🔥🔥 모두 파이팅 !!! 🔥🔥🔥
 🔥🔥🔥 모두모두 파이팅 !!! 🔥🔥🔥
 🔥🔥🔥 모두모두모두 파이팅 !!! 🔥🔥🔥
+
