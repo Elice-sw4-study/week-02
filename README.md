@@ -56,14 +56,11 @@ git clone https://github.com/Elice-sw4-study/week-01 //레포지토리 주소
 
 ## 🤓 mandatory part
 
-1. 엘리스 알고리즘 5문제
-https://swtrack.elice.io/courses/64483/lectures/548289
+- [엘리스 알고리즘 5문제](https://swtrack.elice.io/courses/64483/lectures/548289)
 
-2. js 35문제
-https://obsidian-scene-3ac.notion.site/JS-100-94d97d294dd14c9b911a02c840fa9f2d
+- [js 35문제](https://obsidian-scene-3ac.notion.site/JS-100-94d97d294dd14c9b911a02c840fa9f2d)
 
-3. 프로그래머스 0단계 70문제
-https://school.programmers.co.kr/learn/challenges/beginner?order=acceptance_desc&page=1&languages=javascript
+- [프로그래머스 0단계 70문제](https://school.programmers.co.kr/learn/challenges/beginner?order=acceptance_desc&page=1&languages=javascript)
 
 ## 🧐 bonus part
 
