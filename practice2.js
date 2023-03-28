@@ -1,3 +1,4 @@
+
 // 자바스크립트 문제집 Ⅱ (5)
 /* 엘리스 플랫폼에서 document.write()로 작성하지만 vscode에서 실행 시 결과 확인하려면 console.log() */
 
@@ -24,29 +25,25 @@ module.exports = solution;
 
 
 // 좋아하는 숫자만 골라내기
-// (0/100)
-// 다시!
+// (100/100)
 
 function solution(input) {
     const num_tuple = ['2','3','5','6','7','8','9'];
 
-    var str = input.replace(/[a-z/]/gi, ''); //문자열에서 알파벳(a~z) 제거 + g(전체적으로), i(대소문자 구별x)
-    let num = str.split('');
+    let str = input.replace(/[a-zA-Z]/g, "");
+    let result = [];
 
-    var result = [];
 
-    while (result.length < 5) {
-        for (var i = 0; i < num.length; i++) {
-            for (var j = 0; j < num_tuple.length; j++) {
-                if (num[i] == num_tuple[j]) {
-                    result.push(num[i]);
-                }
-            }
-        }
+    for (s of str) {
+        if (num_tuple.includes(s))
+            result.push(s);
+        if (result.length === 5)
+            break;
     }
 
-    return result;
+  return result;
 }
+
 
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
 module.exports = solution;
@@ -128,36 +125,39 @@ module.exports = solution;
 
 
 // 괄호의 짝
-// (40/100)
+// (60/100)
 // 다시!
+// 테스트케이스 1, 2 X
 
 function solution(string) {
+    let map = {
+        '}' : '{',
+        ']' : '[',
+        ')' : '('
+    };
 
-    var str = string.replace(/[a-z+*-/]/gi, ''); //문자열에서 알파벳(a~z) 제거 + g(전체적으로), i(대소문자 구별x)
-    str = str.replace(/[0-9]/g, ''); //문자열에서 숫자(0~9) 제거 + g(전체적으로)
-    str = str.replace(/[+*\-\/]/g, ''); //문자열에서 사칙연산 기호(+-*/) 제거 + g(전체적으로)
-    let check = []
+    let check = string.replace(/[a-zA-Z0-9]/g, ""); //영어, 숫자 제거
+    check = check.replace(/[+*\-\/]/g, ""); //특수문자 제거
 
-    var dict = {}
-    dict[')'] = '(';
-    dict['}'] = '{';
-    dict[']'] = '[';
+    console.log(check);
 
-    for (s in str) {
+    let answer = [];
+
+    for (s of check) {
         if(s === "(" || s === "[" || s === "{")
-            check.push(s);
-
-        if(s === ")" || s === "]" || s === "}")
-            if(check.indexOf(dict[s]) > -1) {
-                check.splice(check.indexOf(dict[s], 1));
-            }
+            answer.push(s);
+        else {
+            let tmp = answer.pop();
+            if (map[tmp] !== s)
+                return "비정상";
+        }
     }
 
-    if (check.length === 0)
+    if (answer.length === 0)
         return "정상";
     else
         return "비정상";
 }
 
 // 실행 혹은 제출을 위한 코드입니다. 지우거나 수정하지 말아주세요.
-module.exports = solution;
+//module.exports = solution;
