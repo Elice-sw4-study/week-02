@@ -125,28 +125,26 @@ module.exports = solution;
 
 
 // 괄호의 짝
-// (60/100)
-// 다시!
-// 테스트케이스 1, 2 X
+// (100/100)
 
 function solution(string) {
     let map = {
-        '}' : '{',
-        ']' : '[',
-        ')' : '('
+        '{' : '}',
+        '[' : ']',
+        '(' : ')'
     };
 
     let check = string.replace(/[a-zA-Z0-9]/g, ""); //영어, 숫자 제거
     check = check.replace(/[+*\-\/]/g, ""); //특수문자 제거
-
-    console.log(check);
+    
+    let arr = [...check];
 
     let answer = [];
 
-    for (s of check) {
-        if(s === "(" || s === "[" || s === "{")
+    for (s of arr) {
+        if(s === "(" || s === "[" || s === "{") //여는 기호를 만났을 때
             answer.push(s);
-        else {
+        else { //닫는 기호를 만났을 때
             let tmp = answer.pop();
             if (map[tmp] !== s)
                 return "비정상";
